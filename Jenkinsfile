@@ -4,7 +4,7 @@ pipeline {
     stage('test') {
       steps {
         sh '''pwd
-date > myfile.txt'''
+siteaddress=$(awk \\\'/LoadBalancer/ {print $4":8080"}\\\' myfile.txt)'''
       }
     }
 
